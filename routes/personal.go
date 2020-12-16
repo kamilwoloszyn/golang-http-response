@@ -11,8 +11,8 @@ import (
 func Personal(w http.ResponseWriter, r *http.Request) {
 	//simulate respond
 	respond := data.Data{
-		"Kamil",
-		"Woloszyn",
+		Name:    "Kamil",
+		Surname: "Woloszyn",
 	}
 	v, err := json.Marshal(&respond)
 	if err == nil {
