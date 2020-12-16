@@ -16,9 +16,9 @@ func Personal(w http.ResponseWriter, r *http.Request) {
 	}
 	v, err := json.Marshal(&respond)
 	if err == nil {
-		fmt.Sprintf("%s", string(v))
+		fmt.Fprint(w, string(v))
 	} else {
-		fmt.Sprintf("500 Internal server error!")
+		fmt.Fprintf(w, "500 Internal server error!")
 	}
 
 }
