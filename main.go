@@ -6,8 +6,6 @@ import (
 	"github.com/kamilwoloszyn/golang-http-response/routes"
 )
 
-var visited int64
-
 func main() {
 	http.HandleFunc("/", routes.Mainroute)
 	http.HandleFunc("/personal", routes.Personal)
